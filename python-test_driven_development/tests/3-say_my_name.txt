@@ -1,10 +1,32 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 >>> say_my_name("John", "Smith")
 My name is John Smith
->>> say_my_name("Walter", "White")
-My name is Walter White
+>>> say_my_name("Alice", "")
+My name is Alice
 >>> say_my_name("Bob")
 My name is Bob
+>>> say_my_name("Élodie", "Durand")
+My name is Élodie Durand
+>>> say_my_name("李", "雷")
+My name is 李 雷
+>>> say_my_name("O'Connor", "Mc'Donald")
+My name is O'Connor Mc'Donald
+>>> say_my_name("Anne-Marie", "Le Blanc")
+My name is Anne-Marie Le Blanc
+>>> say_my_name("Nina", "van der Sar")
+My name is Nina van der Sar
+>>> say_my_name("Léo")
+My name is Léo
+>>> say_my_name(" ", " ")
+My name is
+>>> say_my_name("", "")
+My name is
+>>> say_my_name("John", "Doe-Smith")
+My name is John Doe-Smith
+>>> say_my_name("Jean-Pierre", "")
+My name is Jean-Pierre
+>>> say_my_name("Łukasz", "Żółć")
+My name is Łukasz Żółć
 >>> try:
 ...     say_my_name(12, "White")
 ... except Exception as e:
@@ -15,3 +37,13 @@ first_name must be a string
 ... except Exception as e:
 ...     print(e)
 last_name must be a string
+>>> try:
+...     say_my_name(None, None)
+... except Exception as e:
+...     print(e)
+first_name must be a string
+>>> try:
+...     say_my_name(["John"], ["Doe"])
+... except Exception as e:
+...     print(e)
+first_name must be a string
