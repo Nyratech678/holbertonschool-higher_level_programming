@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""This module defines a function that adds two integers."""
+
 def add_integer(a, b=98):
     """Add two integers or floats, and return the result as an integer.
 
@@ -18,7 +20,6 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
 
-    # Protection contre les floats spéciaux
     if a != a or b != b:  # NaN
         raise OverflowError("cannot convert NaN to integer")
     if a in (float("inf"), float("-inf")) or b in (float("inf"), float("-inf")):
