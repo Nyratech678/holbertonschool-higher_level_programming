@@ -2,9 +2,6 @@
 """This module defines a function that adds two integers."""
 
 
-import math
-
-
 def add_integer(a, b=98):
     """Add two integers or floats, and return the result as an integer.
 
@@ -23,9 +20,10 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
 
-    if math.isnan(a) or math.isinf(a):
+    # NaN check: NaN != NaN
+    if a != a or a == float("inf") or a == -float("inf"):
         raise TypeError("a must be an integer")
-    if math.isnan(b) or math.isinf(b):
+    if b != b or b == float("inf") or b == -float("inf"):
         raise TypeError("b must be an integer")
 
     return int(a) + int(b)
