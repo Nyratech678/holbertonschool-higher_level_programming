@@ -16,4 +16,13 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    print("My name is {} {}".format(first_name, last_name))
+    # Handle edge cases for empty or whitespace-only strings
+    first_stripped = first_name.strip()
+    last_stripped = last_name.strip()
+
+    if not first_stripped and not last_stripped:
+        print("My name is")
+    elif last_stripped:
+        print("My name is {} {}".format(first_name, last_name))
+    else:
+        print("My name is {}".format(first_name))
