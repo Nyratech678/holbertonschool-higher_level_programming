@@ -16,5 +16,4 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    # Toujours mettre l’espace entre first_name et last_name
     print("My name is {} {}".format(first_name, last_name))
