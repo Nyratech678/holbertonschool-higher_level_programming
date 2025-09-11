@@ -4,10 +4,6 @@
 def say_my_name(first_name, last_name=""):
     """Prints 'My name is <first_name> <last_name>'.
 
-    This function validates that first_name and last_name are strings,
-    and prints the formatted full name. If last_name is empty, it only
-    prints the first name.
-
     Args:
         first_name (str): The first name of the person.
         last_name (str, optional): The last name of the person. Defaults to "".
@@ -20,5 +16,5 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    full_name = first_name if not last_name else "{} {}".format(first_name, last_name)
-    print("My name is {}".format(full_name))
+    # Toujours mettre l’espace entre first_name et last_name
+    print("My name is {} {}".format(first_name, last_name))
