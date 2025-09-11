@@ -2,9 +2,9 @@
 >>> say_my_name("John", "Smith")
 My name is John Smith
 >>> say_my_name("Alice", "")
-My name is Alice
+My name is Alice 
 >>> say_my_name("Bob")
-My name is Bob
+My name is Bob 
 >>> say_my_name("Élodie", "Durand")
 My name is Élodie Durand
 >>> say_my_name("李", "雷")
@@ -16,15 +16,15 @@ My name is Anne-Marie Le Blanc
 >>> say_my_name("Nina", "van der Sar")
 My name is Nina van der Sar
 >>> say_my_name("Léo")
-My name is Léo
+My name is Léo 
 >>> say_my_name(" ", " ")
-My name is
+My name is    
 >>> say_my_name("", "")
-My name is
+My name is  
 >>> say_my_name("John", "Doe-Smith")
 My name is John Doe-Smith
 >>> say_my_name("Jean-Pierre", "")
-My name is Jean-Pierre
+My name is Jean-Pierre 
 >>> say_my_name("Łukasz", "Żółć")
 My name is Łukasz Żółć
 >>> try:
