@@ -16,4 +16,11 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    print("My name is {} {}".format(first_name, last_name))
+    # Construct the output string carefully to avoid trailing spaces
+    output = "My name is"
+    if first_name.strip():
+        output += " " + first_name
+    if last_name.strip():
+        output += " " + last_name
+
+    print(output)
