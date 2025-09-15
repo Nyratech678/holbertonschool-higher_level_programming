@@ -1,5 +1,7 @@
-# -*- coding: utf-8 -*-
-"""Defines a Square class."""
+#!/usr/bin/python3
+"""Module that defines a Square class."""
+
+
 class Square:
-    """Represent a square."""
+    """Class that defines a square object."""
     pass
