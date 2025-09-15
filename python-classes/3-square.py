@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Module that defines a Square class with size validation."""
+"""Module that defines a Square class with size validation and area computation."""
 
 
 class Square:
-    """Class that defines a square with size validation and area calculation."""
+    """Class that defines a square with size validation and area computation."""
 
     def __init__(self, size=0):
         """Initialize the square with a given size.
@@ -22,9 +22,9 @@ class Square:
         self.__size = size
 
     def area(self):
-        """Calculate and return the area of the square.
+        """Return the current area of the square.
 
         Returns:
-            int: The area of the square.
+            int: The computed area of the square.
         """
         return self.__size * self.__size
