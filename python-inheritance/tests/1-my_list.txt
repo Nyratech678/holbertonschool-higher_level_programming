@@ -1,8 +1,20 @@
 >>> MyList = __import__('1-my_list').MyList
->>> my_list = MyList([3, 1, 2])
->>> print(my_list)
-[3, 1, 2]
->>> my_list.print_sorted()
-[1, 2, 3]
->>> print(my_list)
-[3, 1, 2]
+>>> ml = MyList()
+>>> ml.append(1); ml.append(4); ml.append(2); ml.append(3); ml.append(5)
+>>> print(ml)
+[1, 4, 2, 3, 5]
+>>> ml.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(ml)
+[1, 4, 2, 3, 5]
+>>> ml2 = MyList([3, 1, 3, 2])
+>>> ml2.print_sorted()
+[1, 2, 3, 3]
+>>> ml3 = MyList([0, -2, 5, -1])
+>>> ml3.print_sorted()
+[-2, -1, 0, 5]
+>>> ml4 = MyList()
+>>> ml4.print_sorted()
+[]
+>>> isinstance(ml, list)
+True
