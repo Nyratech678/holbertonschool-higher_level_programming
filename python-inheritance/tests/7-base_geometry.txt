@@ -1,5 +1,11 @@
->>> import importlib.util
->>> spec = importlib.util.spec_from_file_location("bg_mod", "python-inheritance/7-base_geometry.py")
+>>> import importlib.util, os
+>>> # find the file 7-base_geometry.py anywhere under the repo
+>>> target = None
+>>> for root, dirs, files in os.walk('.'):
+...     if '7-base_geometry.py' in files:
+...         target = os.path.join(root, '7-base_geometry.py')
+...         break
+>>> spec = importlib.util.spec_from_file_location("bg_mod", target)
 >>> bg_mod = importlib.util.module_from_spec(spec)
 >>> spec.loader.exec_module(bg_mod)
 >>> BaseGeometry = bg_mod.BaseGeometry
