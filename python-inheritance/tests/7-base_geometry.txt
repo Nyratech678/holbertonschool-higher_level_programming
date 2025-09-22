@@ -1,24 +1,38 @@
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> import importlib.util
+>>> spec = importlib.util.spec_from_file_location("bg_mod", "python-inheritance/7-base_geometry.py")
+>>> bg_mod = importlib.util.module_from_spec(spec)
+>>> spec.loader.exec_module(bg_mod)
+>>> BaseGeometry = bg_mod.BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
->>> bg.integer_validator("width", 89)>>> bg.integer_validator("name", "John")
+>>> bg.integer_validator("width", 89)
+>>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
-TypeError: name must be an integer>>> bg.integer_validator("age", 0)
+TypeError: name must be an integer
+>>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
-ValueError: age must be greater than 0>>> bg.integer_validator("distance", -4)
+ValueError: age must be greater than 0
+>>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
-ValueError: distance must be greater than 0>>> bg.area()
+ValueError: distance must be greater than 0
+>>> bg.area()
 Traceback (most recent call last):
-Exception: area() is not implemented>>> bg.integer_validator()
+Exception: area() is not implemented
+>>> bg.integer_validator()
 Traceback (most recent call last):
-TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'>>> bg.integer_validator("age", (4,))
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> bg.integer_validator("age", (4,))
 Traceback (most recent call last):
-TypeError: age must be an integer>>> bg.integer_validator("test", [1, 2, 3])
+TypeError: age must be an integer
+>>> bg.integer_validator("test", [1, 2, 3])
 Traceback (most recent call last):
-TypeError: test must be an integer>>> bg.integer_validator("test", True)
+TypeError: test must be an integer
+>>> bg.integer_validator("test", True)
 Traceback (most recent call last):
-TypeError: test must be an integer>>> bg.integer_validator("test", {1, 2, 3})
+TypeError: test must be an integer
+>>> bg.integer_validator("test", {1, 2, 3})
 Traceback (most recent call last):
-TypeError: test must be an integer>>> bg.integer_validator("test", None)
+TypeError: test must be an integer
+>>> bg.integer_validator("test", None)
 Traceback (most recent call last):
 TypeError: test must be an integer
