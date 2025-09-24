@@ -10,9 +10,9 @@ class Animal(ABC):
 
 class Dog(Animal):
     def sound(self) -> str:
-        return "Woof!"
+        return "Bark"
 
 
 class Cat(Animal):
     def sound(self) -> str:
-        return "Meow!"
+        return "Meow"
