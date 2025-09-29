@@ -38,6 +38,7 @@ class Student:
                 if hasattr(self, attr):
                     filtered_dict[attr] = getattr(self, attr)
             return filtered_dict
+
     def reload_from_json(self, json):
         """Replaces all attributes of the Student instance
 
