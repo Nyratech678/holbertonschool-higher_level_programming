@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that adds all arguments to a Python list, and then saves them to a file"""
+"""Module that adds all arguments to a Python list"""
 import sys
 from os.path import exists
 
