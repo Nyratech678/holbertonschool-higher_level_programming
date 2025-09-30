@@ -5,10 +5,10 @@ import xml.etree.ElementTree as ET
 
 def serialize_to_xml(dictionary, filename):
     """Serialize a dictionary to an XML file."""
-    root = ET.Element("data")  # racine <data>
+    root = ET.Element("data")
     for key, value in dictionary.items():
-        child = ET.SubElement(root, key)  # clé devient tag
-        child.text = str(value)  # valeur en texte
+        child = ET.SubElement(root, key)
+        child.text = str(value)
 
     tree = ET.ElementTree(root)
     tree.write(filename, encoding="utf-8", xml_declaration=True)
