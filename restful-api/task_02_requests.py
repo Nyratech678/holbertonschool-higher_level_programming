@@ -21,7 +21,6 @@ def fetch_and_save_posts():
     response = requests.get(url)
     if response.status_code == 200:
         posts = response.json()
-        # Filter only needed fields
         data = [
             {'id': post['id'], 'title': post['title'], 'body': post['body']}
             for post in posts
