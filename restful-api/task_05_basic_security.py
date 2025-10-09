@@ -5,10 +5,12 @@ from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity, get_jwt
 
+
 app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = 'supersecretkey'
 jwt = JWTManager(app)
 auth = HTTPBasicAuth()
+
 
 users = {
     "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
@@ -26,7 +28,7 @@ def verify_password(username, password):
 
 @auth.error_handler
 def auth_error(status):
-    return jsonify({"error": "Unauthorized access"}), 401
+    return jsonify({"error": "Unauthorized"}), 401
 
 
 @app.route('/basic-protected')
