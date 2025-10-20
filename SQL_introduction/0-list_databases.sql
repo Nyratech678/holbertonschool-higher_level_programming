@@ -1,2 +1,2 @@
---list all databases in my fucking mysql server--
+-- list all databases in my fucking mysql server
 SHOW DATABASES;
