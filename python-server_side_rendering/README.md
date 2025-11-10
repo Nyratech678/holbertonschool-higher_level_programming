@@ -1,0 +1,1 @@
+when we help someone we help same yourself
