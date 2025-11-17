@@ -1,0 +1,1 @@
+everything is object but same for life
